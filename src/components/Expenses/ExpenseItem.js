@@ -4,13 +4,20 @@ import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
   //it is best practice to separate large chunks of JS logic from your JSX code, as shown below
+  let title = props.title;
+  
+  const clickHandler = () => {
+    console.log('Clicked!');
+  }
+  
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
       <div className="expense-item__description">
-        <h2>{props.title}</h2>
+        <h2>{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
+      <button onClick={clickHandler}>Change Title</button>
     </Card>
   );
 }
