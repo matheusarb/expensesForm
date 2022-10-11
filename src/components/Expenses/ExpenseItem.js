@@ -1,14 +1,18 @@
+import React, { useState } from 'react';
+
 import ExpenseDate from "./ExpenseDate";
 import Card from '../UI/Card';
 import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
   //it is best practice to separate large chunks of JS logic from your JSX code, as shown below
-  let title = props.title;
-  
+  const [title, setTitle] = useState(props.title);
+  console.log('ExpenseItem evaluated by React');
+   
   const clickHandler = () => {
-    console.log('Clicked!');
-  }
+    setTitle('Updated!');
+    console.log(title);
+  };
   
   return (
     <Card className="expense-item">
