@@ -21,6 +21,8 @@ const Expenses = (props) => {
         />
         {props.items.map((expense) => (
           <ExpenseItem
+            //key props helps React organize the array of elements
+            key={expense.id}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
