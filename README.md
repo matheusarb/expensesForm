@@ -2,7 +2,7 @@
 
 ## Expenses Form
 
-A dynamic Expense Form which allows the user to add and delete items rendered in a chart.
+A dynamic Expenses Form which allows the user to add and delete items rendered in a chart.
 
 The purpose is to keep track of monthly expenses and filter it by year, all in a user friendly environment.
 
