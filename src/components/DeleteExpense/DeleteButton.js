@@ -1,10 +1,13 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const DeleteButton = () => {
   const [toDelete, isDeleted] = useState();
 
-  return <button></button>;
+  return (
+    <div>
+      <button>Delete</button>
+    </div>
+  );
 };
 
 export default DeleteButton;

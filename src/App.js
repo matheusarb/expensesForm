@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
+import DeleteButton from "./components/DeleteExpense/DeleteButton";
 
 const INITIAL_EXPENSES = [
   {
@@ -39,10 +40,16 @@ const App = () => {
     });
   };
 
+  //create deleteButton logic
+  const deleteExpenseHandler = (expense) => {
+    setExpenses();
+  };
+
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
+      <DeleteButton onDeleteExpense={deleteExpenseHandler} />
     </div>
   );
 };
